@@ -1,0 +1,57 @@
+table{
+  width: 700px;
+}
+
+table, th, tr, td {
+  border: 1px solid darkgray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th{
+  background: crimson;
+  color: white;
+}
+
+tr:nth-child(2) > *{
+  font-size: 14px;
+  background: lightgray;
+  font-weight: bold;
+}
+
+tr:nth-child(2) >*:not(:first-child){
+  text-align: center;
+}
+
+.row:hover{
+  background: lavenderblush;
+}
+
+.event{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  font-size: 14px;
+}
+
+.timeInfo{
+  font-size: 12px;
+  font-style: italic;
+}
+
+.odds{
+  width: 20px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.red{
+  background: crimson;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+

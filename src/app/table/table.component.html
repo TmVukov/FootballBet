@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th colspan="4">{{ league[0] }}</th>
+  </tr>
+  <tr>
+    <td>Event</td>
+    <td>1</td>
+    <td>x</td>
+    <td>2</td>
+  </tr>
+  <tr class="row" *ngFor="let item of extractedData">
+    <td class="event">
+      <span>{{ item.participantOne }} - {{ item.participantTwo }} ⚽</span>
+      <span class="timeInfo">{{ item.day }}, {{ item.time }}</span>
+    </td>
+
+    <td class="odds" *ngFor="let pick of item.picks" (click)="getInfo($event)">
+      {{ pick ? pick.odds : '-' }}
+    </td>
+  </tr>
+</table>
+
+

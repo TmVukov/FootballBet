@@ -1,0 +1,32 @@
+<section class="ticket">
+  <div *ngIf="!selectedData.length; else showTicket" class="ticketMessage">
+    <h5>Please add ticket...</h5>
+  </div>
+  <ng-template #showTicket>
+    <div
+      class="ticketInfo"
+      *ngFor="let data of selectedData; let i = index"
+      (click)="closeTicket(i, $event, input)"
+    >
+      <div class="ticketHeader">
+        <h6>{{ data.teamsInfo }}</h6>
+        <span>☒</span>
+      </div>
+      <div class="ticketDetails">
+        <p>{{ data.timeInfo }}</p>
+        <p>{{ data.odds }}</p>
+      </div>
+    </div>
+  </ng-template>
+  <div class="ticketCalc">
+    <div class="ticketRate">
+      <p>Rate:</p>
+      <span>{{this.selectedData.length ? getTicketRate() : '0'}}</span>
+    </div>
+    <input type="text" placeholder="amount" [(ngModel)]="amount" #input/>
+    <div class="ticketGain">
+      <p>Gain:</p>
+      <span>{{getTicketGain() ? getTicketGain().toFixed(2) : '0'}}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+.ticket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  border: 1px solid darkgray;
+}
+
+.ticketInfo {
+  max-width: 100%;
+  height: 65px;
+  border: 1px solid lightgray;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.ticketInfo:hover {
+  box-shadow: inset 0px -5px 7px 1px rgba(91, 91, 91, 0.2);
+}
+
+.ticketInfo h6 {
+  margin: 0;
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticketHeader span {
+  opacity: 0;
+}
+
+.ticketInfo:hover span {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.ticketInfo span:hover{
+  color: crimson;
+}
+
+.ticketDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticketDetails p:first-child {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.ticketDetails p:last-child {
+  font-size: 12px;
+}
+
+.ticketCalc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  padding: 10px 5px;
+  background: slategray;
+}
+
+.ticketCalc input {
+  height: 30px;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.ticketCalc input::placeholder {
+  text-indent: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: 30%;
+}
+
+.ticketRate,
+.ticketGain {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+.ticketGain {
+  font-size: 14px;
+  font-weight:  bold;
+}
+
+.ticketMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.ticketMessage h5 {
+  margin: 0;
+}
