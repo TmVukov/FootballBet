@@ -22,7 +22,8 @@ export class TableService {
   fetchData(): Observable<void> {
     return this.http
       .get<ApiData>(
-        'https://sportdataprovider.stage-volcano.com/api/public/prematch/SportEvents?SportId=1&LocationId=243&timezone=-120&clientType=MobileWebConsumer&lang=en'
+        'https://sportdataprovider.stage-volcano.com/api/public/prematch/SportEvents?SportId=1&LocationId=243&timezone=-120&clientType=MobileWebConsumer&lang=en',
+        {headers: { accept: 'Accept: application/json' }}
       )
       .pipe(
         map((response) => {
